@@ -712,11 +712,6 @@ const token = process.env.META_ACCESS_TOKEN;
 
 ---
 
-<div align="center">
-
-**[⬆ Voltar ao topo](#-media-buyer-squad---claude-code-edition)**
-
-
 # 🎯 Media Buyer Squad Antigravity Edition
 
 > Squad avançado de IA para gestão de tráfego pago com 5 agentes especializados, 18 skills e 47 frameworks de experts
@@ -1244,12 +1239,6 @@ Participe das [discussões](https://github.com/seu-usuario/media-buyer-squad/dis
 ### Documentação
 
 Consulte a [documentação completa](docs/) ou [wiki](https://github.com/seu-usuario/media-buyer-squad/wiki)
-
----
-
-## 🌟 Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=seu-usuario/media-buyer-squad&type=Date)](https://star-history.com/#seu-usuario/media-buyer-squad&Date)
 
 ---
 
