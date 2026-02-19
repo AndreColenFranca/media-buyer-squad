@@ -2,7 +2,7 @@ name: Sync Media Buyer Squad
 
 on:
   schedule:
-    - cron: '11 20 * * *'  # 14:50 Brasília (16:50 UTC - horário de verão)
+    - cron: '15 19 * * *'  # 14:50 Brasília (16:50 UTC - horário de verão)
   workflow_dispatch:
 
 permissions:
