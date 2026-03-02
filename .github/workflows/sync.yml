@@ -22,28 +22,14 @@ jobs:
           git config user.name "GitHub Actions Bot"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Verificar se há mudanças
-        run: |
-          git remote add upstream https://github.com/allanrehder/media-buyer-squad.git
-          git fetch upstream main
-
-          LOCAL=$(git rev-parse origin/main)
-          REMOTE=$(git rev-parse upstream/main)
-
-          if [ "$LOCAL" = "$REMOTE" ]; then
-            echo "Sem mudancas. Sincronizacao cancelada."
-            exit 0
-          else
-            echo "Mudancas detectadas! Sincronizando..."
-          fi
-
       - name: Sincronizar com upstream (merge)
         run: |
+          git remote add upstream https://github.com/allanrehder/media-buyer-squad.git
           git fetch upstream main
           git merge -X theirs upstream/main -m "Sincronizacao automatica com allanrehder/media-buyer-squad" || true
           git push https://x-access-token:${{ secrets.SYNC_TOKEN_SQUAD }}@github.com/${{ github.repository }}.git main
 
-      - name: Sincronizacao concluida!
+      - name: ✓ Sincronização concluída!
         run: |
-          echo "Sincronizacao executada com sucesso!"
+          echo "Sincronização executada com sucesso!"
           git log -1 --oneline
