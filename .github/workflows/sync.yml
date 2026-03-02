@@ -26,7 +26,11 @@ jobs:
         run: |
           git remote add upstream https://github.com/allanrehder/media-buyer-squad.git
           git fetch upstream main
-          if git diff --quiet origin/main upstream/main; then
+
+          LOCAL=$(git rev-parse origin/main)
+          REMOTE=$(git rev-parse upstream/main)
+
+          if [ "$LOCAL" = "$REMOTE" ]; then
             echo "Sem mudancas. Sincronizacao cancelada."
             exit 0
           else
@@ -43,4 +47,3 @@ jobs:
         run: |
           echo "Sincronizacao executada com sucesso!"
           git log -1 --oneline
-
