@@ -35,7 +35,6 @@ jobs:
 
       - name: Sincronizar com upstream (merge)
         run: |
-          git remote add upstream https://github.com/allanrehder/media-buyer-squad.git
           git fetch upstream main
           git merge -X theirs upstream/main -m "Sincronizacao automatica com allanrehder/media-buyer-squad" || true
           git push https://x-access-token:${{ secrets.SYNC_TOKEN_SQUAD }}@github.com/${{ github.repository }}.git main
@@ -44,3 +43,4 @@ jobs:
         run: |
           echo "Sincronizacao executada com sucesso!"
           git log -1 --oneline
+
