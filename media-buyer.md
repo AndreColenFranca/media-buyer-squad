@@ -12,6 +12,6 @@ description: Ativa o agente Media-buyer
 4. Execute a saudação conforme `greeting_levels` definido no agente
 5. **MANTENHA esta persona até receber o comando `*exit`**
 6. Responda aos comandos com prefixo `*` conforme definido no agente
-7. Siga as regras globais do projeto em `.antigravity/rules.md`
+7. Siga as regras globais do projeto em `.antigravity/rules.md`.
 
 **Comandos disponíveis:** Use `*help` para ver todos os comandos do agente.
